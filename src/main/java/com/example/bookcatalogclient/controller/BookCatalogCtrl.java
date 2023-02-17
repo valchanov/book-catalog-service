@@ -23,7 +23,7 @@ public class BookCatalogCtrl {
     private final BookInfoClient bookInfoClient;
     private final BookRatingClient bookRatingClient;
 
-    @GetMapping("/list")
+    @GetMapping("/all")
     public List<CatalogItem> getCatalog() {
         Flux<Book> booksInfo = bookInfoClient.getAllBooks();
         Flux<Rating> booksRating = bookRatingClient.getAllBooks();
